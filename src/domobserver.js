@@ -2,7 +2,7 @@ import browser from "./browser"
 import {domIndex} from "./dom"
 import {hasFocusAndSelection, hasSelection, selectionToDOM} from "./selection"
 
-const observeOptions = {childList: true, characterData: true, attributes: true, subtree: true, characterDataOldValue: true}
+const observeOptions = {childList: true, characterData: true, attributes: true, subtree: true, characterDataOldValue: true, attributeOldValue: true}
 // IE11 has very broken mutation observers, so we also listen to DOMCharacterDataModified
 const useCharData = browser.ie && browser.ie_version <= 11
 
